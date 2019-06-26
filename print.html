@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Print</title>
+</head>
+<body>
+	<h1>Print Selected Section</h1>
+	<div class="" id="print">
+		<h2>Krishna</h2>
+		<h2>Kanhaiya</h2>
+		<i>Download</i>
+	</div>
+	<br>
+
+	<button input="button" onclick="printinvoice()">Print</button>
+
+	<script>
+		function printinvoice(){
+			var mode = document.body.innerHTML;
+			var printcontent = document.getElementById('print').innerHTML;
+			document.body.innerHTML = printcontent;
+			window.print();
+			document.body.innerHTML = mode;
+		}
+	</script>
+</body>
+</html>
